@@ -46,11 +46,13 @@
   </style>
 </head>
 <body>
-  <h1>dfsdf</h1>
-  <footer>dsf</footer>
-
-
-
+  <div id="app" class="app" data-url="fake/url">
+    <h1>Click Cities:</h1>
+    <div class="cities-container">
+        <!-- Here we can listen to the inside event @clicked and fire a method defined on the outside -->
+        <!-- <city v-for="city in cities" :name="city" @clicked="log(city)"></city> -->
+    </div>
+  </div>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <script src="https://vuejs.org/js/vue.js"></script>
     <script>
