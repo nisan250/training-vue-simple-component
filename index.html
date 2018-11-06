@@ -48,78 +48,7 @@
 </head>
 
 <body>
-  <div id="app" class="app" data-url="fake/url">
-    <h1>Click Cities:</h1>
-    <div class="cities-container">
-        <!-- Here we can listen to the inside event @clicked and fire a method defined on the outside -->
-        <city v-for="city in cities" :name="city" @clicked="log(city)"></city>
-    </div>
-
-  </div>
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
-  <script src="https://vuejs.org/js/vue.js"></script>
-  <script>
-    function ajaxCall(url) {
-      console.log(url)
-      return Promise.resolve([
-        'Tel Aviv', 'Bat yam', 'Ramat Gan', 'Ashdod'
-      ])
-    }
-
-    Vue.component('city', {
-
-      props: {
-        name: String
-      },
-
-      data() {
-        return {
-          active: false
-        }
-      },
-
-      computed: {
-        activeClass() {
-          if (this.active) return ['active']
-        }
-      },
-
-      template: `
-        <div class="city" :class="activeClass" @click="toggleActive">
-          <p>{{ name }}</p>
-        </div>
-      `,
-
-      methods: {
-        toggleActive() {
-          this.active = !this.active
-          // Communicate an event from inside the component
-          // to the outside world
-          this.$emit('clicked', this.name)
-        }
-      }
-    })
-
-    const vm = new Vue({
-      el: '#app',
-
-      data: {
-        cities: []
-      },
-
-      methods: {
-        log(city) {
-          console.log('clicked on ' + city)
-        }
-      },
-
-      async beforeMount() {
-        const url = this.$el.dataset.url
-        this.cities = await ajaxCall(url)
-      }
-    })
-  </script>
+HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 </body>
 
 </html>
